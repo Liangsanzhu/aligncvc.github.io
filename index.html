@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="AlignCVC: Aligning Cross-View Consistency to Image-to-3D Generation - Official Project Page">
-  <title>AlignCVC: Aligning Cross-View Consistency</title>
+  <meta name="description" content="AlignCVC: Aligning Cross-View Consistency to Single-Image-to-3D Generation - Official Project Page">
+  <title>AlignCVC: Aligning Cross-View Consistency to Single-Image-to-3D Generation</title>
   <style>
     /* Global Styles */
     body {
@@ -164,7 +164,7 @@
 <body>
   <header>
     <h1>AlignCVC</h1>
-    <p>Aligning Cross-View Consistency to Image-to-3D Generation</p>
+    <p>AlignCVC: Aligning Cross-View Consistency to Single-Image-to-3D Generation</p>
   </header>
 
   <div class="container">
@@ -185,10 +185,9 @@
     <section>
       <h2>Abstract</h2>
       <p>
-        Single-image-to-3D models typically follow a sequential generation and reconstruction workflow. However, intermediate 
-        multi-view images synthesized by pre-trained generation models often lack cross-view consistency (CVC), significantly degrading 
-        3D reconstruction performance. <strong>AlignCVC</strong> introduces a novel framework using distribution alignment instead of strict regression, 
-        fundamentally improving CVC and accelerating inference to as few as 4 steps.
+        Single-image-to-3D models typically follow a sequential generation and reconstruction workflow. However, intermediate multi-view images synthesized by pre-trained generation models often lack cross-view consistency (CVC), significantly degrading 3D reconstruction performance. While recent methods attempt to refine CVC by feeding reconstruction results back into the multi-view generator, these approaches struggle with noisy and unstable reconstruction outputs that limit effective CVC improvement.
+We introduce AlignCVC, a novel framework that fundamentally re-frames single-image-to-3D generation through distribution alignment rather than relying on strict regression losses. Our key insight is to align both generated and reconstructed multi-view distributions toward the ground-truth multi-view distribution, establishing a principled foundation for improved CVC. Observing that generated images exhibit weak CVC while reconstructed images display strong CVC due to explicit rendering, we propose a soft-hard alignment strategy with distinct objectives for generation and reconstruction models. This approach not only enhances generation quality but also dramatically accelerates inference to as few as 4 steps.
+As a plug-and-play paradigm, our method, namely AlignCVC, seamlessly integrates various multi-view generation models with 3D reconstruction models. Extensive experiments demonstrate the effectiveness and efficiency of AlignCVC for single-image-to-3D generation.
       </p>
     </section>
 
@@ -222,7 +221,7 @@
       <p>If you find our work helpful, please consider citing our paper:</p>
       <pre>
 @article{AlignCVC,
-  title={AlignCVC: Aligning Cross-View Consistency to Image-to-3D Generation},
+  title={AlignCVC: Aligning Cross-View Consistency to Single-Image-to-3D Generation},
   author={Xinyue Liang and Zhiyuan Ma and Lingchen Sun and Yanjun Guo and Lei Zhang},
   journal={arXiv preprint arXiv:XXXX.XXXXX},
   year={202X}
